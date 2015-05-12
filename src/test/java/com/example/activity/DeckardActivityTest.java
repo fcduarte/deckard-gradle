@@ -8,12 +8,21 @@ import org.robolectric.annotation.Config;
 
 import static org.junit.Assert.assertTrue;
 
+import io.card.payment.CardIOActivity;
+import io.card.payment.CreditCard;
+
 @RunWith(RobolectricTestRunner.class)
 @Config(manifest = "src/main/AndroidManifest.xml", emulateSdk = 18)
 public class DeckardActivityTest {
 
     @Test
-    public void testSomething() throws Exception {
-        assertTrue(Robolectric.buildActivity(DeckardActivity.class).create().get() != null);
+    public void testCardIoError1() {
+        CreditCard creditCard = new CreditCard();
     }
+
+    @Test
+    public void testCardIoError2() {
+        CardIOActivity.canReadCardWithCamera();
+    }
+
 }
