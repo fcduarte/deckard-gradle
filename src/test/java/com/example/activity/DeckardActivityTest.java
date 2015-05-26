@@ -12,7 +12,6 @@ import io.card.payment.CardIOActivity;
 import io.card.payment.CreditCard;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(manifest = "src/main/AndroidManifest.xml", emulateSdk = 18)
 public class DeckardActivityTest {
 
     @Test
